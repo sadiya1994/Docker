@@ -1,0 +1,10 @@
+version: "3"
+services:
+  ubuntu:  
+   #image: ubuntu1
+   build: /root/Docker/Docker-File/Docker/
+   volumes:
+     - my_ubuntu:/my_data
+
+volumes:
+  my_ubuntu:
