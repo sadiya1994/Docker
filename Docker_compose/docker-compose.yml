@@ -1,0 +1,19 @@
+version: '3'
+services:
+  web:
+   image: nginx
+   ports: 
+    - 8080:80
+   volumes:
+    - nginx_volumes:/etc/nginx/templates
+   command: [nginx-debug, '-g', 'daemon off;']
+  
+  database:
+   image: redis
+   ports:
+    - 8081:6379
+   volumes:
+    - /my_volume
+ 
+volumes:
+    nginx_volumes:
