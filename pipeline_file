@@ -24,7 +24,7 @@ pipeline {
 	       sh 'ls'
                sh 'cd Terraform'
                sh 'pwd'
-               sh 'cd /var/lib/jenkins/workspace/Git_Terraform_Docker_project/Terraform'
+               sh 'cat Terraform/server-compose-log.tf'
                sh 'ls'
                sh 'terraform init'
       
