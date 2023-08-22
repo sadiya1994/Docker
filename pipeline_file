@@ -30,7 +30,23 @@ pipeline {
            }           
            
        }
-       
+      
+         stage(Docker_version_check) {
+           steps {
+
+               sh 'docker --version'
+               sh 'echo "docker version has been printed"'
+               sh 'ls'
+               sh 'cd Docker'
+               sh 'ls'
+               sh 'docker build -t imagename1 .'
+               sh 'pwd'
+               sh 'ls'
+              
+
+           }
+
+     } 
        
     }
 }
