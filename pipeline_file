@@ -1,0 +1,32 @@
+pipeline {
+    
+    agent any
+     tools {
+      terraform 'Terraform v1.5.1'
+      git 'Default'
+	  dockerTool 'Docker'
+    }
+    stages {
+       stage(aws_version_check) {
+           steps {
+               
+               sh 'aws --version '
+               sh 'ls /var/log/'
+               sh 'echo "aws version has been printed"'
+               sh 'whoami'
+           }
+       }
+       stage(terraform_version_check) {
+           steps {
+               
+               sh 'terraform --version'
+               sh 'echo "terraform version has been printed"'
+			         sh 'cd /var/lib/jenkins/workspace/Git_Project/Terraform'
+			         sh 'ls'
+           }           
+           
+       }
+       
+       
+    }
+}
