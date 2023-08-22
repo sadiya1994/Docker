@@ -24,7 +24,6 @@ pipeline {
 	       sh 'ls'
                sh 'cd Terraform'
                sh 'pwd'
-               sh 'cat Terraform/server-compose-log.tf'
                sh 'ls'
                sh 'terraform init'
       
