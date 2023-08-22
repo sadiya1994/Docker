@@ -12,6 +12,6 @@ resource "aws_s3_bucket" "my-califo-14032257" {
 
   tags = {
     Name        = "My bucket"
-    Environment = "Dev"
+
   }
 }
