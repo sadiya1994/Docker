@@ -21,8 +21,10 @@ pipeline {
                
                sh 'terraform --version'
                sh 'echo "terraform version has been printed"'
-			         sh 'cd /var/lib/jenkins/workspace/Git_Project/Terraform'
-			         sh 'ls'
+      
+	       sh 'ls'
+      
+                         
            }           
            
        }
