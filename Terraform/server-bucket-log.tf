@@ -6,7 +6,7 @@ provider "aws" {
 
 }
 
-#resource to create bucket
+
 resource "aws_s3_bucket" "my-califo-14032257" {
   bucket = "sadiya-0986"
 
