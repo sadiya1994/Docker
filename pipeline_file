@@ -23,6 +23,7 @@ pipeline {
                sh 'echo "terraform version has been printed"'
 	       sh 'ls'
                sh 'cd Terraform'
+               sh 'terraform init'
       
                          
            }           
