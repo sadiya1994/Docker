@@ -40,6 +40,7 @@ pipeline {
                sh 'cd Docker'
                sh 'ls'
                sh 'docker build -t imagename1 .'
+               sh 'docker run -it --name test_container imagename1 //bin/bash'
                sh 'pwd'
               
 
