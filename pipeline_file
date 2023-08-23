@@ -37,9 +37,6 @@ pipeline {
 
                sh 'docker --version'
                sh 'cd /var/run'
-               sh 'chmod 777 /var/run/docker.sock'
-               sh 'systemctl start docker'
-               sh 'systemctl status docker'
                sh 'cd Docker'
                sh 'ls'
                sh 'docker build -t imagename1 .'
