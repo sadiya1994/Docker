@@ -36,6 +36,7 @@ pipeline {
            steps {
 
                sh 'docker --version'
+               dh 'chmod 777 /var/run/docker.sock'
                sh 'systemctl start docker'
                sh 'systemctl status docker'
                sh 'cd Docker'
