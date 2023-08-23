@@ -36,6 +36,7 @@ pipeline {
            steps {
 
                sh 'docker --version'
+               sh 'systemctl status docker'
                sh 'echo "docker version has been printed"'
                sh 'cd Docker'
                sh 'ls'
